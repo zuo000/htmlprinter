@@ -1,0 +1,337 @@
+<html> 
+<head> 
+    <meta charset="utf-8">
+    <script src="jquery.min.js" type="text/javascript"></script> 
+    <title> </title>
+</head>
+<style media="print">
+    @page
+    {
+        size: auto;
+        margin: 0mm;
+    }
+</style>
+<style TYPE="text/css">    
+    .tail
+    {
+        position: absolute;
+        top: 80%;
+        left: 48%;
+    }
+    .center
+    {        
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 1164px;
+        height: 542px;
+        background-image: URL(1.jpg);
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .button
+    {
+        width: 100px;
+        height: 50px;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    .inputYear
+    {
+        position: absolute;        
+        text-align: right;
+        top: 101px;
+        right: 804px;
+        width: 90px;
+        font-size: 1em;
+    }
+    .inputMon
+    {
+        position: absolute;
+        text-align: right;
+        top: 102px;
+        right: 694px;
+        width: 40px;
+        font-size: 1em;
+    }
+    .inputDay
+    {
+        position: absolute;        
+        text-align: right;
+        top: 104px;
+        right: 584px;
+        width: 55px;
+        font-size: 1em;
+    }
+    .payee
+    {
+        position: absolute;        
+        text-align: left;
+        top: 133px;
+        left: 145px;
+        width: 500px;
+        font-size: 1em;
+    }
+    .volume
+    {
+        position: absolute;        
+        text-align: left;
+        top: 189px;
+        left: 167px;
+        width: 580px;
+        font-size: 1em;
+    }
+    .yiwan
+    {
+        position: absolute;        
+        text-align: center;
+        top: 214px;
+        left: 782px;
+        width: 27px;
+        font-size: 0.5em;
+    }
+    .qianwan
+    {
+        position: absolute;        
+        text-align: center;
+        top: 214px;
+        left: 810px;
+        width: 27px;
+        font-size: 0.5em;
+    }
+    .baiwan
+    {
+        position: absolute;        
+        text-align: center;
+        top: 214px;
+        left: 838px;
+        width: 27px;
+        font-size: 0.5em;
+    }
+    .shiwan
+    {
+        position: absolute;        
+        text-align: center;
+        top: 214px;
+        left: 866px;
+        width: 26px;
+        font-size: 0.5em;
+    }
+    .wan
+    {
+        position: absolute;        
+        text-align: center;
+        top: 214px;
+        left: 893px;
+        width: 26px;
+        font-size: 0.5em;
+    }
+    .qian
+    {
+        position: absolute;        
+        text-align: center;
+        top: 215px;
+        left: 920px;
+        width: 26px;
+        font-size: 0.5em;
+    }
+    .bai
+    {
+        position: absolute;        
+        text-align: center;
+        top: 215px;
+        left: 947px;
+        width: 26px;
+        font-size: 0.5em;
+    }
+    .shi
+    {
+        position: absolute;        
+        text-align: center;
+        top: 215px;
+        left: 973px;
+        width: 26px;
+        font-size: 0.5em;
+    }
+    .yuan
+    {
+        position: absolute;        
+        text-align: center;
+        top: 216px;
+        left: 1000px;
+        width: 27px;
+        font-size: 0.5em;
+    }
+    .jiao
+    {
+        position: absolute;        
+        text-align: center;
+        top: 216px;
+        left: 1027px;
+        width: 26px;
+        font-size: 0.5em;
+    }
+    .fen
+    {
+        position: absolute;        
+        text-align: center;
+        top: 216px;
+        left: 1053px;
+        width: 25px;
+        font-size: 0.5em;
+    }
+    .purpose
+    {
+        position: absolute;        
+        text-align: left;
+        top: 256px;
+        left: 123px;
+        width: 140px;
+        font-size: 1em;
+    }
+</style>
+<body>
+    <div class='main'>
+        <div class='center' id='printpage'>
+            <input class='inputYear' type="text" id="year" placeholder=""/>
+            <input class='inputMon' type="text" id="month" placeholder=""/>
+            <input class='inputDay' type="text" id="day" placeholder=""/>
+            <input class='payee' type="text" id="payee" placeholder=""/>
+            <input class='volume' type="text" id="volume" placeholder=""/>
+            <input class='yiwan' type="text" id="yiwan" placeholder=""/>
+            <input class='qianwan' type="text" id="qianwan" placeholder=""/>
+            <input class='baiwan' type="text" id="baiwan" placeholder=""/>
+            <input class='shiwan' type="text" id="shiwan" placeholder=""/>
+            <input class='wan' type="text" id="wan" placeholder=""/>
+            <input class='qian' type="text" id="qian" placeholder=""/>
+            <input class='bai' type="text" id="bai" placeholder=""/>
+            <input class='shi' type="text" id="shi" placeholder=""/>
+            <input class='yuan' type="text" id="yuan" placeholder=""/>
+            <input class='jiao' type="text" id="jiao" placeholder=""/>
+            <input class='fen' type="text" id="fen" placeholder=""/>
+            <input class='purpose' type="text" id="purpose" placeholder=""/>
+        </div>
+        <div class='tail'>
+            <button class='button' onclick="javascript:printHTML('#printpage');">打印</button>
+        </div>
+    </div>
+    <script language="javascript"> 
+        function printHTML(page)
+        {
+            var oldPage = window.document.body.innerHTML;
+
+            var year = document.getElementById("year").value;
+            if (year == "")
+            {
+                alert("请输入年");
+                return;
+            }
+
+            var month = document.getElementById("month").value;
+            if (month == "")
+            {
+                alert("请输入月");
+                return;
+            }
+
+            var day = document.getElementById("day").value;
+            if (day == "")
+            {
+                alert("请输入日");
+                return;
+            }
+
+            var payee = document.getElementById("payee").value;
+            if (payee == "")
+            {
+                alert("请输入收款人");
+                return;
+            }
+
+            var volume = document.getElementById("volume").value;
+            if (volume == "")
+            {
+                alert("请输入人民币大写");
+                return;
+            }
+
+            var purpose = document.getElementById("purpose").value;
+            if (purpose == "")
+            {
+                alert("请输入用途");
+                return;
+            }
+
+	        $("#year").attr('value', year);            
+            $("#year").attr('style', "border-style:none;right: 667px;top: 48px");
+            
+	        $("#month").attr('value', month);            
+            $("#month").attr('style', "border-style:none;right: 607px;top: 48px");
+            
+	        $("#day").attr('value', day);            
+            $("#day").attr('style', "border-style:none;right: 549px;top: 48px");
+
+            $("#payee").attr('value', payee);            
+            $("#payee").attr('style', "border-style:none;left: 12px;top: 66px");
+
+            $("#volume").attr('value', volume);            
+            $("#volume").attr('style', "border-style:none;left: 22px;top: 98px");
+
+            var yiwan = document.getElementById("yiwan").value;
+            $("#yiwan").attr('value', yiwan);            
+            $("#yiwan").attr('style', "border-style:none; width: 15px;left: 360px;top: 103px");
+
+            var qianwan = document.getElementById("qianwan").value;
+            $("#qianwan").attr('value', qianwan);            
+            $("#qianwan").attr('style', "border-style:none; width: 15px;left: 375px;top: 103px");
+
+            var baiwan = document.getElementById("baiwan").value;
+            $("#baiwan").attr('value', baiwan);            
+            $("#baiwan").attr('style', "border-style:none; width: 15px;left: 390px;top: 103px");
+
+            var shiwan = document.getElementById("shiwan").value;
+            $("#shiwan").attr('value', shiwan);            
+            $("#shiwan").attr('style', "border-style:none; width: 15px;left: 405px;top: 103px");
+
+            var wan = document.getElementById("wan").value;
+            $("#wan").attr('value', wan);            
+            $("#wan").attr('style', "border-style:none; width: 15px;left: 420px;top: 103px");
+
+            var qian = document.getElementById("qian").value;
+            $("#qian").attr('value', qian);            
+            $("#qian").attr('style', "border-style:none; width: 15px;left: 435px;top: 103px");
+
+            var bai = document.getElementById("bai").value;
+            $("#bai").attr('value', bai);            
+            $("#bai").attr('style', "border-style:none; width: 15px;left: 450px;top: 103px");
+
+            var shi = document.getElementById("shi").value;
+            $("#shi").attr('value', shi);            
+            $("#shi").attr('style', "border-style:none; width: 15px;left: 465px;top: 103px");
+
+            var yuan = document.getElementById("yuan").value;
+            $("#yuan").attr('value', yuan);            
+            $("#yuan").attr('style', "border-style:none; width: 15px;left: 480px;top: 103px");
+
+            var jiao = document.getElementById("jiao").value;
+            $("#jiao").attr('value', jiao);            
+            $("#jiao").attr('style', "border-style:none; width: 15px;left: 495px;top: 103px");
+
+            var fen = document.getElementById("fen").value;
+            $("#fen").attr('value', fen);            
+            $("#fen").attr('style', "border-style:none; width: 15px;left: 510px;top: 103px");
+
+            $("#purpose").attr('value', purpose);            
+            $("#purpose").attr('style', "border-style:none;left: 5px;top: 132px");
+
+            window.document.body.innerHTML = $(page).html();         
+            window.print(); 
+
+            window.document.body.innerHTML = oldPage;
+        } 
+    </script> 
+</body>
+</html>

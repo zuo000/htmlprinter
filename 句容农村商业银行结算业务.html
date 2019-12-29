@@ -1,0 +1,523 @@
+<html> 
+<head> 
+    <meta charset="utf-8">
+    <script src="jquery.min.js" type="text/javascript"></script> 
+    <title> </title>
+</head>
+<style media="print">
+    @page
+    {
+        size: auto;
+        margin: 0mm;
+    }
+</style>
+<style TYPE="text/css">    
+    .tail
+    {
+        position: absolute;
+        top: 80%;
+        left: 48%;
+    }
+    .center
+    {        
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 1164px;
+        height: 542px;
+        background-image: URL(4.jpg);
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .button
+    {
+        width: 100px;
+        height: 50px;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    .inputYear
+    {
+        position: absolute;        
+        text-align: right;
+        top: 23mm;
+        right: 141mm;
+        width: 20mm;
+        font-size: 12px;        
+        font-family: "宋体";
+    }
+    .inputMon
+    {
+        position: absolute;
+        text-align: right;
+        top: 23mm;
+        right: 123mm;
+        width: 10mm;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .inputDay
+    {
+        position: absolute;        
+        text-align: right;
+        top: 23mm;
+        right: 103mm;
+        width: 10mm;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .fullname1
+    {
+        position: absolute;        
+        text-align: left;
+        top: 173px;
+        left: 210px;
+        width: 220px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .accountnum1
+    {
+        position: absolute;        
+        text-align: left;
+        top: 200px;
+        left: 210px;
+        width: 220px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .bankname1
+    {
+        position: absolute;        
+        text-align: left;
+        top: 228px;
+        left: 210px;
+        width: 220px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .province1
+    {
+        position: absolute;        
+        text-align: right;
+        top: 256px;
+        right: 904px;
+        width: 50px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .city1
+    {
+        position: absolute;        
+        text-align: right;
+        top: 256px;
+        right: 780px;
+        width: 60px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .fullname2
+    {
+        position: absolute;        
+        text-align: left;
+        top: 168px;
+        left: 746px;
+        width: 220px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .accountnum2
+    {
+        position: absolute;        
+        text-align: left;
+        top: 197px;
+        left: 746px;
+        width: 220px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .bankname2
+    {
+        position: absolute;        
+        text-align: left;
+        top: 228px;
+        left: 746px;
+        width: 220px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .province2
+    {
+        position: absolute;        
+        text-align: right;
+        top: 253px;
+        right: 366px;
+        width: 50px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .city2
+    {
+        position: absolute;        
+        text-align: right;
+        top: 252px;
+        right: 243px;
+        width: 60px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .volume
+    {
+        position: absolute;        
+        text-align: left;
+        top: 293px;
+        left: 187px;
+        width: 480px;
+        font-size: 1em;
+        font-family: "宋体";
+    }
+    .yiwan
+    {
+        position: absolute;        
+        text-align: center;
+        top: 302px;
+        left: 747px;
+        width: 29px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .qianwan
+    {
+        position: absolute;        
+        text-align: center;
+        top: 302px;
+        left: 780px;
+        width: 29px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .baiwan
+    {
+        position: absolute;        
+        text-align: center;
+        top: 302px;
+        left: 813px;
+        width: 29px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .shiwan
+    {
+        position: absolute;        
+        text-align: center;
+        top: 302px;
+        left: 846px;
+        width: 29px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .wan
+    {
+        position: absolute;        
+        text-align: center;
+        top: 302px;
+        left: 878px;
+        width: 29px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .qian
+    {
+        position: absolute;        
+        text-align: center;
+        top: 302px;
+        left: 911px;
+        width: 29px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .bai
+    {
+        position: absolute;        
+        text-align: center;
+        top: 302px;
+        left: 943px;
+        width: 29px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .shi
+    {
+        position: absolute;        
+        text-align: center;
+        top: 302px;
+        left: 975px;
+        width: 29px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .yuan
+    {
+        position: absolute;        
+        text-align: center;
+        top: 301px;
+        left: 1007px;
+        width: 29px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .jiao
+    {
+        position: absolute;        
+        text-align: center;
+        top: 301px;
+        left: 1040px;
+        width: 29px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+    .fen
+    {
+        position: absolute;        
+        text-align: center;
+        top: 301px;
+        left: 1072px;
+        width: 29px;
+        font-size: 12px;
+        font-family: "宋体";
+    }
+</style>
+<body>
+    <div class='main'>
+        <div class='center' id='printpage'>
+            <input class='inputYear' type="text" id="year" placeholder=""/>
+            <input class='inputMon' type="text" id="month" placeholder=""/>
+            <input class='inputDay' type="text" id="day" placeholder=""/>
+            <input class='fullname1' type="text" id="fullname1" placeholder=""/>
+            <input class='accountnum1' type="text" id="accountnum1" placeholder=""/>
+            <input class='bankname1' type="text" id="bankname1" placeholder=""/>
+            <input class='province1' type="text" id="province1" placeholder=""/>
+            <input class='city1' type="text" id="city1" placeholder=""/>
+            <input class='fullname2' type="text" id="fullname2" placeholder=""/>
+            <input class='accountnum2' type="text" id="accountnum2" placeholder=""/>
+            <input class='bankname2' type="text" id="bankname2" placeholder=""/>
+            <input class='province2' type="text" id="province2" placeholder=""/>
+            <input class='city2' type="text" id="city2" placeholder=""/>
+            <input class='volume' type="text" id="volume" placeholder=""/>
+            <input class='yiwan' type="text" id="yiwan" placeholder=""/>
+            <input class='qianwan' type="text" id="qianwan" placeholder=""/>
+            <input class='baiwan' type="text" id="baiwan" placeholder=""/>
+            <input class='shiwan' type="text" id="shiwan" placeholder=""/>
+            <input class='wan' type="text" id="wan" placeholder=""/>
+            <input class='qian' type="text" id="qian" placeholder=""/>
+            <input class='bai' type="text" id="bai" placeholder=""/>
+            <input class='shi' type="text" id="shi" placeholder=""/>
+            <input class='yuan' type="text" id="yuan" placeholder=""/>
+            <input class='jiao' type="text" id="jiao" placeholder=""/>
+            <input class='fen' type="text" id="fen" placeholder=""/>
+        </div>
+        <div class='tail'>
+            <button class='button' onclick="javascript:printHTML('#printpage');">打印</button>
+        </div>
+    </div>
+    <script language="javascript"> 
+        function printHTML(page)
+        {
+            var oldPage = window.document.body.innerHTML;
+
+            var year = document.getElementById("year").value;
+            if (year == "")
+            {
+                alert("请输入年");
+                return;
+            }
+
+            var month = document.getElementById("month").value;
+            if (month == "")
+            {
+                alert("请输入月");
+                return;
+            }
+
+            var day = document.getElementById("day").value;
+            if (day == "")
+            {
+                alert("请输入日");
+                return;
+            }
+
+            var fullname1 = document.getElementById("fullname1").value;
+            if (fullname1 == "")
+            {
+                alert("请输入申请人全称");
+                return;
+            }
+
+            var accountnum1 = document.getElementById("accountnum1").value;
+            if (accountnum1 == "")
+            {
+                alert("请输入申请人账号或地址");
+                return;
+            }
+
+            var bankname1 = document.getElementById("bankname1").value;
+            if (bankname1 == "")
+            {
+                alert("请输入申请人开户行名称");
+                return;
+            }
+
+            var province1 = document.getElementById("province1").value;
+            if (province1 == "")
+            {
+                alert("请输入申请人开户银行所在省份");
+                return;
+            }
+
+            var city1 = document.getElementById("city1").value;
+            if (city1 == "")
+            {
+                alert("请输入申请人开户银行所在县市");
+                return;
+            }
+
+            var fullname2 = document.getElementById("fullname2").value;
+            if (fullname2 == "")
+            {
+                alert("请输入收款人全称");
+                return;
+            }
+
+            var accountnum2 = document.getElementById("accountnum2").value;
+            if (accountnum2 == "")
+            {
+                alert("请输入收款人账号或地址");
+                return;
+            }
+
+            var bankname2 = document.getElementById("bankname2").value;
+            if (bankname2 == "")
+            {
+                alert("请输入收款人开户行名称");
+                return;
+            }
+
+            var province2 = document.getElementById("province2").value;
+            if (province2 == "")
+            {
+                alert("请输入收款人开户银行所在省份");
+                return;
+            }
+
+            var city2 = document.getElementById("city2").value;
+            if (city2 == "")
+            {
+                alert("请输入收款人开户银行所在县市");
+                return;
+            }
+
+            var volume = document.getElementById("volume").value;
+            if (volume == "")
+            {
+                alert("请输入金额");
+                return;
+            }
+            
+	        $("#year").attr('value', year);            
+            $("#year").attr('style', "border-style:none;right: 125mm;top: 17mm");
+            
+	        $("#month").attr('value', month);            
+            $("#month").attr('style', "border-style:none;right: 113mm;top: 17mm");
+            
+	        $("#day").attr('value', day);            
+            $("#day").attr('style', "border-style:none;right: 102mm;top: 17mm");
+
+            $("#fullname1").attr('value', fullname1);            
+            $("#fullname1").attr('style', "border-style:none; left: 67px; top: 132px");
+
+            $("#accountnum1").attr('value', accountnum1);            
+            $("#accountnum1").attr('style', "border-style:none; left: 67px; top: 152px");
+
+            $("#bankname1").attr('value', bankname1);            
+            $("#bankname1").attr('style', "border-style:none; left: 67px; top: 173px");
+
+            $("#province1").attr('value', province1);            
+            $("#province1").attr('style', "border-style:none; right: 694px; top: 194px");
+
+            $("#city1").attr('value', city1);            
+            $("#city1").attr('style', "border-style:none; right: 618px; top: 194px");
+
+            $("#fullname2").attr('value', fullname2);            
+            $("#fullname2").attr('style', "border-style:none; left: 393px; top: 132px");
+
+            $("#accountnum2").attr('value', accountnum2);            
+            $("#accountnum2").attr('style', "border-style:none; left: 393px; top: 152px");
+
+            $("#bankname2").attr('value', bankname2);            
+            $("#bankname2").attr('style', "border-style:none; left: 393px; top: 173px");
+
+            $("#province2").attr('value', province2);            
+            $("#province2").attr('style', "border-style:none; right: 370px; top: 194px");
+
+            $("#city2").attr('value', city2);            
+            $("#city2").attr('style', "border-style:none; right: 294px; top: 194px");
+
+            $("#volume").attr('value', volume);            
+            $("#volume").attr('style', "border-style:none; left: 60px; top: 221px");
+
+            var yiwan = document.getElementById("yiwan").value;
+            $("#yiwan").attr('value', yiwan);            
+            $("#yiwan").attr('style', "border-style:none; width: 20px;left: 391px;top: 235px");
+
+            var qianwan = document.getElementById("qianwan").value;
+            $("#qianwan").attr('value', qianwan);            
+            $("#qianwan").attr('style', "border-style:none; width: 20px;left: 411px;top: 235px");
+
+            var baiwan = document.getElementById("baiwan").value;
+            $("#baiwan").attr('value', baiwan);            
+            $("#baiwan").attr('style', "border-style:none; width: 20px;left: 430px;top: 235px");
+
+            var shiwan = document.getElementById("shiwan").value;
+            $("#shiwan").attr('value', shiwan);            
+            $("#shiwan").attr('style', "border-style:none; width: 20px;left: 450px;top: 235px");
+
+            var wan = document.getElementById("wan").value;
+            $("#wan").attr('value', wan);            
+            $("#wan").attr('style', "border-style:none; width: 20px;left: 469px;top: 235px");
+
+            var qian = document.getElementById("qian").value;
+            $("#qian").attr('value', qian);            
+            $("#qian").attr('style', "border-style:none; width: 20px;left: 489px;top: 235px");
+
+            var bai = document.getElementById("bai").value;
+            $("#bai").attr('value', bai);            
+            $("#bai").attr('style', "border-style:none; width: 20px;left: 508px;top: 235px");
+
+            var shi = document.getElementById("shi").value;
+            $("#shi").attr('value', shi);            
+            $("#shi").attr('style', "border-style:none; width: 20px;left: 528px;top: 235px");
+
+            var yuan = document.getElementById("yuan").value;
+            $("#yuan").attr('value', yuan);            
+            $("#yuan").attr('style', "border-style:none; width: 20px;left: 547px;top: 235px");
+
+            var jiao = document.getElementById("jiao").value;
+            $("#jiao").attr('value', jiao);            
+            $("#jiao").attr('style', "border-style:none; width: 20px;left: 567px;top: 235px");
+
+            var fen = document.getElementById("fen").value;
+            $("#fen").attr('value', fen);            
+            $("#fen").attr('style', "border-style:none; width: 20px;left: 586px;top: 235px");
+
+
+            window.document.body.innerHTML = $(page).html();         
+            window.print(); 
+
+            window.document.body.innerHTML = oldPage;
+        } 
+    </script> 
+</body>
+</html>
