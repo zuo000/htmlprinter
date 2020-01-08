@@ -326,8 +326,6 @@
     <script language="javascript"> 
         function printHTML(page)
         {
-            var oldPage = window.document.body.innerHTML;
-
             var year = document.getElementById("year").value;
             if (year == "")
             {
@@ -426,92 +424,70 @@
                 return;
             }
             
-            $("#year").attr('value', year);            
-            $("#year").attr('style', "border-style:none;right: 125mm;top: 17mm");
-            
-            $("#month").attr('value', month);            
-            $("#month").attr('style', "border-style:none;right: 113mm;top: 17mm");
-            
-            $("#day").attr('value', day);            
-            $("#day").attr('style', "border-style:none;right: 102mm;top: 17mm");
-
-            $("#fullname1").attr('value', fullname1);            
-            $("#fullname1").attr('style', "border-style:none; left: 67px; top: 132px");
-
-            $("#accountnum1").attr('value', accountnum1);            
-            $("#accountnum1").attr('style', "border-style:none; left: 67px; top: 152px");
-
-            $("#bankname1").attr('value', bankname1);            
-            $("#bankname1").attr('style', "border-style:none; left: 67px; top: 173px");
-
-            $("#province1").attr('value', province1);            
-            $("#province1").attr('style', "border-style:none; right: 694px; top: 194px");
-
-            $("#city1").attr('value', city1);            
-            $("#city1").attr('style', "border-style:none; right: 618px; top: 194px");
-
-            $("#fullname2").attr('value', fullname2);            
-            $("#fullname2").attr('style', "border-style:none; left: 393px; top: 132px");
-
-            $("#accountnum2").attr('value', accountnum2);            
-            $("#accountnum2").attr('style', "border-style:none; left: 393px; top: 152px");
-
-            $("#bankname2").attr('value', bankname2);            
-            $("#bankname2").attr('style', "border-style:none; left: 393px; top: 173px");
-
-            $("#province2").attr('value', province2);            
-            $("#province2").attr('style', "border-style:none; right: 370px; top: 194px");
-
-            $("#city2").attr('value', city2);            
-            $("#city2").attr('style', "border-style:none; right: 294px; top: 194px");
-
-            $("#volume").attr('value', volume);            
-            $("#volume").attr('style', "border-style:none; left: 60px; top: 221px");
-
+            $("#year").attr('value', year);
+            $("#month").attr('value', month);
+            $("#day").attr('value', day);
+            $("#fullname1").attr('value', fullname1);
+            $("#accountnum1").attr('value', accountnum1);
+            $("#bankname1").attr('value', bankname1);
+            $("#province1").attr('value', province1);
+            $("#city1").attr('value', city1);
+            $("#fullname2").attr('value', fullname2);
+            $("#accountnum2").attr('value', accountnum2);
+            $("#bankname2").attr('value', bankname2);
+            $("#province2").attr('value', province2);
+            $("#city2").attr('value', city2);
+            $("#volume").attr('value', volume);
             var yiwan = document.getElementById("yiwan").value;
-            $("#yiwan").attr('value', yiwan);            
-            $("#yiwan").attr('style', "border-style:none; width: 20px;left: 391px;top: 235px");
-
+            $("#yiwan").attr('value', yiwan);
             var qianwan = document.getElementById("qianwan").value;
-            $("#qianwan").attr('value', qianwan);            
-            $("#qianwan").attr('style', "border-style:none; width: 20px;left: 411px;top: 235px");
-
+            $("#qianwan").attr('value', qianwan);
             var baiwan = document.getElementById("baiwan").value;
-            $("#baiwan").attr('value', baiwan);            
-            $("#baiwan").attr('style', "border-style:none; width: 20px;left: 430px;top: 235px");
-
+            $("#baiwan").attr('value', baiwan);
             var shiwan = document.getElementById("shiwan").value;
-            $("#shiwan").attr('value', shiwan);            
-            $("#shiwan").attr('style', "border-style:none; width: 20px;left: 450px;top: 235px");
-
+            $("#shiwan").attr('value', shiwan);
             var wan = document.getElementById("wan").value;
-            $("#wan").attr('value', wan);            
-            $("#wan").attr('style', "border-style:none; width: 20px;left: 469px;top: 235px");
-
+            $("#wan").attr('value', wan);
             var qian = document.getElementById("qian").value;
-            $("#qian").attr('value', qian);            
-            $("#qian").attr('style', "border-style:none; width: 20px;left: 489px;top: 235px");
-
+            $("#qian").attr('value', qian);
             var bai = document.getElementById("bai").value;
-            $("#bai").attr('value', bai);            
-            $("#bai").attr('style', "border-style:none; width: 20px;left: 508px;top: 235px");
-
+            $("#bai").attr('value', bai);
             var shi = document.getElementById("shi").value;
-            $("#shi").attr('value', shi);            
-            $("#shi").attr('style', "border-style:none; width: 20px;left: 528px;top: 235px");
-
+            $("#shi").attr('value', shi);
             var yuan = document.getElementById("yuan").value;
-            $("#yuan").attr('value', yuan);            
-            $("#yuan").attr('style', "border-style:none; width: 20px;left: 547px;top: 235px");
-
+            $("#yuan").attr('value', yuan);
             var jiao = document.getElementById("jiao").value;
-            $("#jiao").attr('value', jiao);            
-            $("#jiao").attr('style', "border-style:none; width: 20px;left: 567px;top: 235px");
-
+            $("#jiao").attr('value', jiao);
             var fen = document.getElementById("fen").value;
-            $("#fen").attr('value', fen);            
-            $("#fen").attr('style', "border-style:none; width: 20px;left: 586px;top: 235px");
+            $("#fen").attr('value', fen);
 
+            var oldPage = window.document.body.innerHTML;
+
+            $("#year").attr('style', "border-style:none;right: 125mm;top: 17mm");  
+            $("#month").attr('style', "border-style:none;right: 113mm;top: 17mm");
+            $("#day").attr('style', "border-style:none;right: 102mm;top: 17mm");
+            $("#fullname1").attr('style', "border-style:none; left: 67px; top: 132px");                        
+            $("#accountnum1").attr('style', "border-style:none; left: 67px; top: 152px");
+            $("#bankname1").attr('style', "border-style:none; left: 67px; top: 173px");
+            $("#province1").attr('style', "border-style:none; right: 694px; top: 194px");
+            $("#city1").attr('style', "border-style:none; right: 618px; top: 194px");
+            $("#fullname2").attr('style', "border-style:none; left: 393px; top: 132px");
+            $("#accountnum2").attr('style', "border-style:none; left: 393px; top: 152px");
+            $("#bankname2").attr('style', "border-style:none; left: 393px; top: 173px");                        
+            $("#province2").attr('style', "border-style:none; right: 370px; top: 194px");
+            $("#city2").attr('style', "border-style:none; right: 294px; top: 194px");
+            $("#volume").attr('style', "border-style:none; left: 60px; top: 221px");
+            $("#yiwan").attr('style', "border-style:none; width: 20px;left: 391px;top: 235px");
+            $("#qianwan").attr('style', "border-style:none; width: 20px;left: 411px;top: 235px");
+            $("#baiwan").attr('style', "border-style:none; width: 20px;left: 430px;top: 235px");
+            $("#shiwan").attr('style', "border-style:none; width: 20px;left: 450px;top: 235px");
+            $("#wan").attr('style', "border-style:none; width: 20px;left: 469px;top: 235px");
+            $("#qian").attr('style', "border-style:none; width: 20px;left: 489px;top: 235px");
+            $("#bai").attr('style', "border-style:none; width: 20px;left: 508px;top: 235px");
+            $("#shi").attr('style', "border-style:none; width: 20px;left: 528px;top: 235px");
+            $("#yuan").attr('style', "border-style:none; width: 20px;left: 547px;top: 235px");
+            $("#jiao").attr('style', "border-style:none; width: 20px;left: 567px;top: 235px");
+            $("#fen").attr('style', "border-style:none; width: 20px;left: 586px;top: 235px");
 
             window.document.body.innerHTML = $(page).html();         
             window.print(); 
